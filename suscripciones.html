@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Subscripciones - Tristan: Behind The Books</title>
+  <link rel="shortcut icon" href="img/icono-web/libro-icono.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/reset_estilos.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://www.paypal.com/sdk/js?client-id=ARej3sXLyUrVSGN-fIkcp7jrKwYLXwUNEIvkz-iDJ_wRs41Hqzxii49uBfbEtrzUAnC_9bHrHPyCPA_e&currency=EUR"></script>
+  <script src="./javascript/paypal.js"></script>
+</head>
+
+<body>
+   <!-- Inicio Cabecera -->
+   <header class="header">
+    <div class="header__wrap">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="./img/logo.png" alt="Logo Librería" class="logo__img" />
+        </a>
+      </div>        
+      <nav class="header__menu">
+        <ul class="menu__list">
+          <li class="list__item"><a href="index.html">INICIO</a></li>
+          <li class="list__item">
+            <a class="itemtexto" href="categorias.html">
+              CATEGORIAS <span class="textodesplegable">&#9662;</span>
+            </a>              
+            <ul class="list__submenu">
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=1&nombre=Ficción" class="submenu__title">Ficción</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=2&nombre=Ciencia" class="submenu__title">Ciencia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=3&nombre=Comic/Manga" class="submenu__title">Cómic/Manga</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=4&nombre=Infantil" class="submenu__title">Infantil</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=5&nombre=Fantasía" class="submenu__title">Fantasía</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=6&nombre=Historia" class="submenu__title">Historia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=7&nombre=Literatura" class="submenu__title">Literatura</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=8&nombre=Poesía" class="submenu__title">Poesía</a>
+                </li>
+            </ul>
+          </li>
+          <li class="list__item"><a href="autores.html">AUTORES</a></li>
+          <li class="list__item"><a href="suscripciones.html">SUSCRIPCIONES</a></li>
+          <li class="list__item"><a href="faq.html">FAQ</a></li>
+          <li class="list__item"><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      
+      <div class="buttons">
+        <div id="auth-buttons">
+          <button class="botonIniciar"><a class="texto-boton" href="Login-v2/login/login.html">Iniciar Sesión</a></button>
+          <button class="btnRegistro"><a class="texto-botonRe" href="Login-v2/signup/signup.html">Registrarse</a></button>
+        </div>
+        <div id="user-section" style="display: none;">
+          <div class="user-menu">
+            <img id="user-avatar" src="img/usuarios.webp" alt="Foto de perfil" class="user-avatar">
+            <span id="username-display" class="user-name"></span>
+            <ul class="user-submenu">
+              <li><a href="ajustes.html">Ajustes</a></li>
+              <li><a href="busqueda_favoritos.html">Favoritos</a></li>
+              <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- fin de la Cabecera -->
+  <section class="planes">
+    <h2 class="texto_subs">SUBSCRIPCIONES</h2>
+    <br>
+    <br>
+    <div class="planes-container">
+      <div class="plan-box">
+        <div class="plan-title basico">BÁSICO</div>
+        <ul>
+          <br>
+          <li class="texto-plano"><strong>Precio mensual</strong><br>4,99 €</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Descargas</strong><br>5 descargas al mes</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Ofertas personalizadas</strong><br>3 ofertas mensuales</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Solicitudes de libros</strong><br>2 solicitudes al mes</li>
+        </ul>
+        <button class="subscribe-button" data-plan="4.99">Suscribirse</button>
+      </div>
+  
+      <div class="plan-box">
+        <div class="plan-title estandar">ESTÁNDAR / FLEX</div>
+        <ul>
+          <br>
+          <li class="texto-plano"><strong>Precio mensual</strong><br>8,99 €</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Descargas</strong><br>10 descargas al mes</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Ofertas personalizadas</strong><br>5 ofertas mensuales</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Solicitudes de libros</strong><br>3 solicitudes al mes</li>
+        </ul>
+        <button class="subscribe-button" data-plan="8.99">Suscribirse</button>
+      </div>
+  
+      <div class="plan-box">
+        <div class="plan-title premium">PREMIUM</div>
+        <ul>
+          <br>
+          <li class="texto-plano"><strong>Precio mensual</strong><br>13,99 €</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Descargas</strong><br>Ilimitado</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Ofertas personalizadas</strong><br>10 ofertas mensuales</li>
+          <p>-------------------------------------------------------</p>
+          <li class="texto-plano"><strong>Solicitudes de libros</strong><br>5 solicitudes al mes</li>
+        </ul>
+        <button class="subscribe-button" data-plan="13.99">Suscribirse</button>
+      </div>
+    </div>
+    <div class="modal fade" id="paypalModal" tabindex="-1" aria-labelledby="paypalModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="paypalModalLabel">Confirmar suscripción</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="paypal-button-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+   
+  <!-- Inicio de Pié de Página -->
+  <!-- Coloca esto FUERA de cualquier contenedor limitado -->
+  <footer class="footer">
+    <div class="footer__wrap">
+        <!-- Contenido izquierda (redes sociales) -->
+        <div class="footer-left">
+            <div class="footer__social">
+                <button class="footer__button">REDES SOCIALES</button>
+                <div class="footer__icons">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/iii_tristan_iii?igsh=N3JmdWVpNnVodzMx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/TristanBTBooks"><img src="img/twitter.png" alt="X/Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright centrado -->
+        <div class="footer-center">
+            <p class="footer_copy">© 2025 Tristan: Behind The Books - Todos los derechos reservados</p>
+        </div>
+
+        <!-- Newsletter a la derecha -->
+        <div class="footer-right">
+            <form class="newsletter-form">
+                <div class="newsletter-header">
+                    <span class="newsletter-label">Newsletter</span>
+                    <input type="email" placeholder="Tu email" required>
+                </div>
+                <div class="newsletter-options">
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-all" checked>
+                        <span>Todas</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-poetry">
+                        <span>Poesía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-literature">
+                        <span>Literatura</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-fantasy">
+                        <span>Fantasía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-children">
+                        <span>Infantil</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</footer>
+  <!-- fin de Pié de Página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="./javascript/ajustesusu.js"></script>
+</body>
+
+</html>

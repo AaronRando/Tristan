@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Libro | Tristan: Behind The Books</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/leer_libros.css" />
+  <link rel="shortcut icon" href="img/icono-web/libro-icono.svg" type="image/x-icon" />
+  <style>
+    /* Tus fuentes personalizadas */
+    @font-face {
+      font-family: "TrebuchetMS";
+      src: url("fonts/TrebuchetMS.ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "BebasNeue";
+      src: url("fonts/BebasNeue.otf");
+      font-weight: normal;
+      font-style: normal;
+    }
+    :root {
+      --mx-width: 1240px;
+      --color-primary: #da9d1c54;
+      --color-banner: #A38852;
+      --color-fondo: #FEFFF0;
+      --color-boton: #ffffff;
+      --color-boton2: #000000;
+      --color-text-white: #fff;
+    }
+    html { font-size: 62.5%; overflow-x: hidden; }
+    body {
+      background-color: var(--color-fondo);
+      font-family: "TrebuchetMS", Arial, sans-serif;
+      color: #3e3b3a;
+      margin: 0;
+    }
+    
+    /* SEPARACIÓN NAVBAR (ajusta el valor aquí para más espacio) */
+    .espacio-navbar { height: 60px; }
+    /* GLASSMORPHISM CARD */
+    .libro-glass {
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      padding: 48px 36px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.35);
+      box-shadow: 0 8px 32px 0 rgba(218,157,28,0.15);
+      backdrop-filter: blur(14px) saturate(160%);
+      border: 1.5px solid rgba(163,136,82,0.25);
+      outline: 2px solid #da9d1c54;
+      outline-offset: -6px;
+      transition: box-shadow 0.3s;
+    }
+    .libro-glass:hover {
+      box-shadow: 0 12px 48px 0 rgba(163,136,82,0.18);
+    }
+    .libro-detalle { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+    .libro-info { flex: 1 1 300px; min-width: 260px; }
+    .libro-info h2 { font-family: "BebasNeue"; font-size: 5rem; color: #a38852; letter-spacing: 2px; margin-bottom: 20px; }
+    .libro-info strong { color: #a38852; }
+    .libro-info p { margin-bottom: 12px; font-size: 1.8rem; }
+    .libro-info select { font-size: 1.6rem; padding: 5px 10px; border-radius: 6px; border: 2px solid #da9d1c54; font-family: "TrebuchetMS", Arial, sans-serif; color: #3e3b3a; cursor: pointer; }
+    .libro-portada { flex: 0 0 370px; display: flex; align-items: center; justify-content: center; }
+    .libro-portada img { display: block; width: 100%; height: 480px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 24px #da9d1c54; border: 2px solid #da9d1c54; background: #fff; transition: transform 0.5s; }
+    
+    
+  </style>
+</head>
+<body>
+  <div id="modal" class="modal">
+    <div class="modal-overlay cerrando"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="cerrar cerrando">✕</span>
+      </div>
+      <iframe id="visorPDF" frameborder="0"></iframe>
+    </div>
+  </div>
+  
+   <!-- Inicio Cabecera -->
+   <header class="header">
+    <div class="header__wrap">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="./img/logo.png" alt="Logo Librería" class="logo__img" />
+        </a>
+      </div>        
+      <nav class="header__menu">
+        <ul class="menu__list">
+          <li class="list__item"><a href="index.html">INICIO</a></li>
+          <li class="list__item">
+            <a class="itemtexto" href="categorias.html">
+              CATEGORIAS <span class="textodesplegable">&#9662;</span>
+            </a>              
+            <ul class="list__submenu">
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=1&nombre=Ficción" class="submenu__title">Ficción</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=2&nombre=Ciencia" class="submenu__title">Ciencia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=3&nombre=Comic/Manga" class="submenu__title">Cómic/Manga</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=4&nombre=Infantil" class="submenu__title">Infantil</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=5&nombre=Fantasía" class="submenu__title">Fantasía</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=6&nombre=Historia" class="submenu__title">Historia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=7&nombre=Literatura" class="submenu__title">Literatura</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=8&nombre=Poesía" class="submenu__title">Poesía</a>
+                </li>
+            </ul>
+          </li>
+          <li class="list__item"><a href="autores.html">AUTORES</a></li>
+          <li class="list__item"><a href="suscripciones.html">SUSCRIPCIONES</a></li>
+          <li class="list__item"><a href="faq.html">FAQ</a></li>
+          <li class="list__item"><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      
+      <div class="buttons">
+        <div id="auth-buttons">
+          <button class="botonIniciar"><a class="texto-boton" href="Login-v2/login/login.html">Iniciar Sesión</a></button>
+          <button class="btnRegistro"><a class="texto-botonRe" href="Login-v2/signup/signup.html">Registrarse</a></button>
+        </div>
+        <div id="user-section" style="display: none;">
+          <div class="user-menu">
+            <img id="user-avatar" src="" alt="Foto de perfil" class="user-avatar">
+            <span id="username-display" class="user-name"></span>
+            <ul class="user-submenu">
+              <li><a href="ajustes.html">Ajustes</a></li>
+              <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- fin de la Cabecera -->
+
+  <!-- MUCHO ESPACIO ENTRE NAVBAR Y CONTENIDO -->
+  <div class="espacio-navbar"></div>
+
+  <!-- MARCO GLASSMORPHISM -->
+  <main class="libro-glass">
+    <h1 class="texto_libro">LIBRO</h1>
+    <br>
+    <br>
+    <div class="libro-detalle">
+      <div class="libro-info">
+        <h2 id="nombre"></h2>
+        <p id="descripcion"><strong>Descripción: </strong></p>
+        <p id="año"><strong>Año: </strong></p>
+        <p><strong>Autor: </strong><a href="" id="autor"></a></p>
+        <p id="paginas"><strong>Páginas: </strong></p>
+        <p id="categoria"><strong>Categorias: </strong></p>
+        <!-- Botón para abrir la modal -->
+        <button class="abrirModal" id="abrir_modal">Leer libro</button>
+
+      </div>
+      <div class="libro-detalle">
+        <div class="libro-info">
+          <!-- Contenido de información del libro -->
+        </div>
+        
+        <div class="libro-portada-container">
+          <div class="libro-portada">
+            <img src="" alt="" id="imagen"/>
+          </div>
+          <div class="favorito-container">
+            <button id="favorito-btn" class="favorito-btn">
+              <span class="favorito-texto">Favorito</span>
+              <span class="corazon">♡</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__wrap">
+        <!-- Contenido izquierda (redes sociales) -->
+        <div class="footer-left">
+            <div class="footer__social">
+                <button class="footer__button">REDES SOCIALES</button>
+                <div class="footer__icons">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/iii_tristan_iii?igsh=N3JmdWVpNnVodzMx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/TristanBTBooks"><img src="img/twitter.png" alt="X/Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright centrado -->
+        <div class="footer-center">
+            <p class="footer_copy">© 2025 Tristan: Behind The Books - Todos los derechos reservados</p>
+        </div>
+
+        <!-- Newsletter a la derecha -->
+        <div class="footer-right">
+            <form class="newsletter-form">
+                <div class="newsletter-header">
+                    <span class="newsletter-label">Newsletter</span>
+                    <input type="email" placeholder="Tu email" required>
+                </div>
+                <div class="newsletter-options">
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-all" checked>
+                        <span>Todas</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-poetry">
+                        <span>Poesía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-literature">
+                        <span>Literatura</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-fantasy">
+                        <span>Fantasía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-children">
+                        <span>Infantil</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</footer>
+<script type="module" src="./javascript/ajustesusu.js"></script>
+<script type="module" src="./javascript/libro.js"></script>
+<script src="./javascript/leer_libro.js"></script>
+<script src="./javascript/favoritos.js"></script>
+</body>
+</html>

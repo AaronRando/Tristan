@@ -1,0 +1,402 @@
+/* Estilos generales */
+
+/* Media queries para diferentes tamaños de pantalla */
+
+/* Responsive para tarjetas */
+@media (max-width: 1200px) {
+  .cards__card {
+    grid-template-columns: repeat(2, 1fr);
+    width: 15%;
+  }
+
+  .detalles_productos,
+  .seccion_equipo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .content__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards__card {
+
+    width: 25%;
+    margin: 10px;
+  }
+
+  .detalles_productos,
+  .seccion_equipo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .carta_producto,
+  .miembro_equipo {
+    padding: 12px;
+  }
+
+  .carta_producto img,
+  .miembro_equipo img {
+    max-width: 90px;
+    height: 90px;
+  }
+
+  .carta_producto p,
+  .miembro_equipo p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards__card {
+    width: 45%; 
+    margin: 10px;
+  }
+
+  .detalles_productos,
+  .seccion_equipo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .carta_producto,
+  .miembro_equipo {
+    padding: 10px;
+  }
+
+  .carta_producto img,
+  .miembro_equipo img {
+    max-width: 80px;
+    height: 80px;
+  }
+
+  .carta_producto p,
+  .miembro_equipo p {
+    font-size: 14px;
+  }
+
+  #productos h2,
+  #equipo h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .content__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards__card {
+    width: 50%;
+    margin: 15px 0;
+    padding: 15px;
+  }
+
+  .card__icon {
+    font-size: 35px;
+  }
+
+  .card__category {
+    font-size: 22px;
+  }
+
+  .card__description {
+    font-size: 14px;
+  }
+
+  .detalles_productos,
+  .seccion_equipo {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .carta_producto,
+  .miembro_equipo {
+    padding: 15px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .carta_producto img,
+  .miembro_equipo img {
+    max-width: 100px;
+    height: 100px;
+  }
+
+  .carta_producto p,
+  .miembro_equipo p {
+    font-size: 16px;
+  }
+
+  #productos h2,
+  #equipo h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  #productos,
+  #equipo {
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .cards__card {
+    width: 50%; 
+    padding: 10px;
+  }
+
+  .card__icon {
+    font-size: 30px;
+  }
+
+  .card__category {
+    font-size: 20px;
+  }
+
+  .card__description {
+    font-size: 13px;
+  }
+
+  .carta_producto,
+  .miembro_equipo {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .carta_producto img,
+  .miembro_equipo img {
+    max-width: 90px;
+    height: 90px;
+  }
+
+  .carta_producto p,
+  .miembro_equipo p {
+    font-size: 14px;
+  }
+
+  #productos h2,
+  #equipo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #productos,
+  #equipo {
+    padding: 20px 5px;
+  }
+}
+
+@media (max-width: 1245px) {
+  .aside-box {
+    width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .lateral__login input[type="email"],
+  .lateral__login input[type="password"] {
+    width: 85%;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .lateral__social {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .content__articles {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .content__articles h2 {
+    font-size: 35px;
+  }
+
+  .articles__article {
+    width: 100%;
+    margin: 20px auto;
+    padding: 5px;
+  }
+
+  #productos h2,
+  #equipo h2 {
+    font-size: 32px;
+  }
+
+  .footer__title {
+    font-size: 35px;
+  }
+
+  .footer__list {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1079px) {
+  .aside-box {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .lateral__login input[type="email"],
+  .lateral__login input[type="password"] {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .content__articles h2 {
+    font-size: 30px;
+  }
+
+  .articles__article {
+    margin: 15px auto;
+  }
+
+  .footer__title {
+    font-size: 30px;
+  }
+
+  .footer__list {
+    font-size: 20px;
+  }
+
+  #productos h2,
+  #equipo h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 800px) {
+  .aside-box {
+    height: auto;
+  }
+
+  .lateral__social {
+    gap: 5px;
+  }
+
+  #productos,
+  #equipo {
+    padding: 20px 5px;
+  }
+}
+
+@media (max-width: 720px) {
+  .aside-box {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .lateral__login input[type="email"],
+  .lateral__login input[type="password"] {
+    width: 80%;
+  }
+
+  .lateral__social {
+    flex-direction: column;
+  }
+
+  .footer__wrap>div {
+    width: 45%;
+    margin: 5px;
+  }
+
+  .content__articles {
+    width: 100%;
+  }
+
+  .content__articles h2 {
+    font-size: 26px;
+  }
+
+  .articles__article h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 660px) {
+  .aside-box {
+    padding: 5px;
+  }
+
+  .lateral__login input[type="email"], .lateral__login input[type="password"] {
+    width: 75%;
+  }
+
+  .content__articles h2 {
+    font-size: 22px;
+  }
+
+  .articles__article {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .lateral__login input[type="email"],
+  .lateral__login input[type="password"] {
+    font-size: 13px;
+  }
+
+  .footer__wrap>div {
+    width: 100%;
+  }
+
+  .footer__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detalles_productos,
+  .seccion_equipo {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .carta_producto,
+  .miembro_equipo {
+    padding: 8px;
+  }
+
+  .miembro_equipo img {
+    max-width: 80px;
+    height: 80px;
+  }
+
+  .miembro_equipo p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 470px) {
+  .lateral__login input[type="email"],
+  .lateral__login input[type="password"] {
+    width: 70%;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .content__articles h2 {
+    font-size: 20px;
+  }
+
+  .footer__title {
+    font-size: 20px;
+  }
+
+  .footer__list {
+    font-size: 16px;
+  }
+}

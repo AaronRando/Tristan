@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Autor - Tristan: Behind The Books</title>
+  <link rel="shortcut icon" href="./img/icono-web/libro-icono.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/reset_estilos.css" />
+  <link rel="stylesheet" href="./css/estilos.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="stylesheet" href="./css/autor_carrusel.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+</head>
+
+<body>
+   <!-- Inicio Cabecera -->
+   <header class="header">
+    <div class="header__wrap">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="./img/logo.png" alt="Logo Librería" class="logo__img" />
+        </a>
+      </div>        
+      <nav class="header__menu">
+        <ul class="menu__list">
+          <li class="list__item"><a href="index.html">INICIO</a></li>
+          <li class="list__item">
+            <a class="itemtexto" href="categorias.html">
+              CATEGORIAS <span class="textodesplegable">&#9662;</span>
+            </a>              
+            <ul class="list__submenu">
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=1&nombre=Ficción" class="submenu__title">Ficción</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=2&nombre=Ciencia" class="submenu__title">Ciencia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=3&nombre=Comic/Manga" class="submenu__title">Cómic/Manga</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=4&nombre=Infantil" class="submenu__title">Infantil</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=5&nombre=Fantasía" class="submenu__title">Fantasía</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=6&nombre=Historia" class="submenu__title">Historia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=7&nombre=Literatura" class="submenu__title">Literatura</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=8&nombre=Poesía" class="submenu__title">Poesía</a>
+                </li>
+            </ul>
+          </li>
+          <li class="list__item"><a href="autores.html">AUTORES</a></li>
+          <li class="list__item"><a href="suscripciones.html">SUSCRIPCIONES</a></li>
+          <li class="list__item"><a href="faq.html">FAQ</a></li>
+          <li class="list__item"><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      
+      <div class="buttons">
+        <div id="auth-buttons">
+          <button class="botonIniciar"><a class="texto-boton" href="Login-v2/login/login.html">Iniciar Sesión</a></button>
+          <button class="btnRegistro"><a class="texto-botonRe" href="Login-v2/signup/signup.html">Registrarse</a></button>
+        </div>
+        <div id="user-section" style="display: none;">
+          <div class="user-menu">
+            <img id="user-avatar" src="img/usuarios.webp" alt="Foto de perfil" class="user-avatar">
+            <span id="username-display" class="user-name"></span>
+            <ul class="user-submenu">
+              <li><a href="ajustes.html">Ajustes</a></li>
+              <li><a href="busqueda_favoritos.html">Favoritos</a></li>
+              <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- fin de la Cabecera -->
+  <br>
+  <br>
+  <br>
+  <main class="content__wrap">
+  <div class="container">
+    <div class="autor">
+      <div class="autor-info">
+        <img class="autorimg" src="./img/Andrea_Amanda_aturora_.jpg" alt="Andrea"/>
+        <div class="autor-texto">
+          <p class="texto_autor"><strong>Andrea Aranda Vigo</strong></p>
+          <div class="texto_autor">Descripción</div>
+          <p class="texto_p">Una malagueña que adora leer, escribir, el dibujo y las artes marciales. Osteópata de profesión, artista por afición.</p>
+        </div>
+      </div>
+    </div> 
+   </div>
+   </div>
+   </main>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <main class="container">
+       <!-- Carrusel de Libros -->
+<section class="carrusel-full ancho-total">
+  <div id="carruselLibros" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row justify-content-center align-items-center libro-slide">
+          <div class="col-lg-6 col-md-12">
+            <h3 class="libro-titulo">La Sombra del Arte</h3>
+            <p><strong>Descripción:</strong> Un recorrido introspectivo por la mente de una artista que fusiona cuerpo y alma en cada trazo.</p>
+            <p><strong>Autor:</strong> Andrea Aranda Vigo</p>
+            <p><strong>Año:</strong> 2023</p>
+            <p><strong>Páginas:</strong> 320</p>
+            <p><strong>Idioma:</strong> Español</p>
+            <p><strong>ISBN:</strong> 978-3-16-148410-0</p>
+          </div>
+          <div class="col-lg-4 col-md-12 text-center">
+            <img src="./img/ciencia.png" alt="Portada del libro" class="img-fluid libro-imagen" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Puedes duplicar más slides como este -->
+       <div class="carousel-item active">
+        <div class="row justify-content-center align-items-center libro-slide">
+          <div class="col-lg-6 col-md-12">
+            <h3 class="libro-titulo">La Sombra del Arte</h3>
+            <p><strong>Descripción:</strong> Un recorrido introspectivo por la mente de una artista que fusiona cuerpo y alma en cada trazo.</p>
+            <p><strong>Autor:</strong> Andrea Aranda Vigo</p>
+            <p><strong>Año:</strong> 2023</p>
+            <p><strong>Páginas:</strong> 320</p>
+            <p><strong>Idioma:</strong> Español</p>
+            <p><strong>ISBN:</strong> 978-3-16-148410-0</p>
+          </div>
+          <div class="col-lg-4 col-md-12 text-center">
+            <img src="./img/comic.jpg" alt="Portada del libro" class="img-fluid libro-imagen" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselLibros" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselLibros" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="footer__wrap">
+        <!-- Contenido izquierda (redes sociales) -->
+        <div class="footer-left">
+            <div class="footer__social">
+                <button class="footer__button">REDES SOCIALES</button>
+                <div class="footer__icons">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/iii_tristan_iii?igsh=N3JmdWVpNnVodzMx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/TristanBTBooks"><img src="img/twitter.png" alt="X/Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright centrado -->
+        <div class="footer-center">
+            <p class="footer_copy">© 2025 Tristan: Behind The Books - Todos los derechos reservados</p>
+        </div>
+
+        <!-- Newsletter a la derecha -->
+        <div class="footer-right">
+            <form class="newsletter-form">
+                <div class="newsletter-header">
+                    <span class="newsletter-label">Newsletter</span>
+                    <input type="email" placeholder="Tu email" required>
+                </div>
+                <div class="newsletter-options">
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-all" checked>
+                        <span>Todas</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-poetry">
+                        <span>Poesía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-literature">
+                        <span>Literatura</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-fantasy">
+                        <span>Fantasía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-children">
+                        <span>Infantil</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</footer>
+  <!-- fin de Pié de Página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="./javascript/ajustesusu.js"></script>
+</body>
+
+</html>

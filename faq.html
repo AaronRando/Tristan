@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>FAQ - Tristan: Behind The Books</title>
+    <link rel="shortcut icon" href="img/icono-web/libro-icono.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset_estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+<body>
+     <!-- Inicio Cabecera -->
+     <header class="header">
+        <div class="header__wrap">
+          <div class="header__logo">
+            <a href="index.html">
+              <img src="./img/logo.png" alt="Logo Librería" class="logo__img" />
+            </a>
+          </div>        
+          <nav class="header__menu">
+            <ul class="menu__list">
+              <li class="list__item"><a href="index.html">INICIO</a></li>
+              <li class="list__item">
+                <a class="itemtexto" href="categorias.html">
+                  CATEGORIAS <span class="textodesplegable">&#9662;</span>
+                </a>              
+                <ul class="list__submenu">
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=1&nombre=Ficción" class="submenu__title">Ficción</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=2&nombre=Ciencia" class="submenu__title">Ciencia</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=3&nombre=Comic/Manga" class="submenu__title">Cómic/Manga</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=4&nombre=Infantil" class="submenu__title">Infantil</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=5&nombre=Fantasía" class="submenu__title">Fantasía</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=6&nombre=Historia" class="submenu__title">Historia</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=7&nombre=Literatura" class="submenu__title">Literatura</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="subcategorias.html?id=8&nombre=Poesía" class="submenu__title">Poesía</a>
+                    </li>
+                </ul>
+              </li>
+              <li class="list__item"><a href="autores.html">AUTORES</a></li>
+              <li class="list__item"><a href="suscripciones.html">SUSCRIPCIONES</a></li>
+              <li class="list__item"><a href="faq.html">FAQ</a></li>
+              <li class="list__item"><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          
+          <div class="buttons">
+            <div id="auth-buttons">
+              <button class="botonIniciar"><a class="texto-boton" href="Login-v2/login/login.html">Iniciar Sesión</a></button>
+              <button class="btnRegistro"><a class="texto-botonRe" href="Login-v2/signup/signup.html">Registrarse</a></button>
+            </div>
+            <div id="user-section" style="display: none;">
+              <div class="user-menu">
+                <img id="user-avatar" src="img/usuarios.webp" alt="Foto de perfil" class="user-avatar">
+                <span id="username-display" class="user-name"></span>
+                <ul class="user-submenu">
+                  <li><a href="ajustes.html">Ajustes</a></li>
+                  <li><a href="busqueda_favoritos.html">Favoritos</a></li>
+                  <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </header>
+      <!-- fin de la Cabecera -->
+
+    <main class="content__wrap faq-container">
+        <h1 class="texto_principal">PREGUNTAS FRECUENTES</h1>
+        
+        <div class="faq-accordion">
+            <!-- Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Qué es Tristan?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Tristan es el lugar donde se le da voz a aquellos que no se les oye. Donde encontrarás todo tipo de libros, relatos y perfiles, que de otra forma, te hubiera sido imposible. Voces que no resuenan tanto y sin embargo, tienen mucho que enseñarte.</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo puedo registrarme en la plataforma?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Para registrarte, haz clic en el botón "Registrarse" en la esquina superior derecha y completa el formulario con tus datos.</p>
+                </div>
+            </div>
+
+             <!-- Item 3 -->
+             <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Puedo descargar libros gratis?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>La respuesta corta es un Sí. Ahora bien lo que estarás descargando serán versiones reducidas de libros de autores pequeños o bien, libros de autores anónimos que se encuentren libres para descargar y disfrutar al momento</p>
+                </div>
+            </div>
+
+             <!-- Item 3 -->
+             <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Por qué debería pagar por leer?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>En Tristan, uno de nuestros pilares es la transparencia, así como la búsqueda de dar al mundo de la literatura y las personas amantes de esta, un lugar seguro y confiable, donde encontrar a personas tan amantes de la lectura como propios escritores de misma. Con tu pago, sea de la subscripción que sea, estas apoyando el mantener un sitio así, además de tener la posibilidad de apoyar a tu nuevo autor favorito o por conocer.</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Qué métodos de pago aceptan?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Aceptamos todas las tarjetas de crédito/débito principales y pagos a través de PayPal.</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Puedo cancelar mi suscripcion en cualquier momento?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Por supuesto. Una vez realizado el pago, en función del tipo de suscripcion realizada, podrás cancelar la suscripcion desde de tu perfil para que no te cobremos el siguiente mes.</p>
+                </div>
+            </div>
+
+             <!-- Item 6 -->
+             <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Existen descuentos y promociones periódicos?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, una de las novedades que queremos ofrecer, con respecto a nuestra competencia, es la posibilidad de que siempre tengas alguna oferta diferente y diaria por la que pasarte a hacernos una visita. Pudiendo incluso encontrar, rebajas de autores poco conocidos e incluso libros completamente gratis de descarga</p>
+                </div>
+            </div>
+
+            <!-- Añadir más items copiando la estructura anterior -->
+             
+            
+        </div>
+
+        <br> <br>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrap">
+            <!-- Contenido izquierda (redes sociales) -->
+            <div class="footer-left">
+                <div class="footer__social">
+                    <button class="footer__button">REDES SOCIALES</button>
+                    <div class="footer__icons">
+                        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/iii_tristan_iii?igsh=N3JmdWVpNnVodzMx"><img src="img/instagram.png" alt="Instagram"></a>
+                        <a href="https://x.com/TristanBTBooks"><img src="img/twitter.png" alt="X/Twitter"></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright centrado -->
+            <div class="footer-center">
+                <p class="footer_copy">© 2025 Tristan: Behind The Books - Todos los derechos reservados</p>
+            </div>
+    
+            <!-- Newsletter a la derecha -->
+            <div class="footer-right">
+                <form class="newsletter-form">
+                    <div class="newsletter-header">
+                        <span class="newsletter-label">Newsletter</span>
+                        <input type="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="newsletter-options">
+                        <label class="newsletter-checkbox">
+                            <input type="checkbox" name="newsletter-all" checked>
+                            <span>Todas</span>
+                        </label>
+                        <label class="newsletter-checkbox">
+                            <input type="checkbox" name="newsletter-poetry">
+                            <span>Poesía</span>
+                        </label>
+                        <label class="newsletter-checkbox">
+                            <input type="checkbox" name="newsletter-literature">
+                            <span>Literatura</span>
+                        </label>
+                        <label class="newsletter-checkbox">
+                            <input type="checkbox" name="newsletter-fantasy">
+                            <span>Fantasía</span>
+                        </label>
+                        <label class="newsletter-checkbox">
+                            <input type="checkbox" name="newsletter-children">
+                            <span>Infantil</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./javascript/faq.js"></script>
+    <script src="./javascript/ajustesusu.js"></script>
+</body>
+</html>

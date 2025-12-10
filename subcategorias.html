@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Subcategorias - Tristan: Behind The Books</title>
+  <link rel="shortcut icon" href="img/icono-web/libro-icono.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/reset_estilos.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .content__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .cards__card {
+      width: 210px;
+      height: 320px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin: 10px;
+    }
+    .cards__card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    .card__image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 2px solid #ddd;
+    }
+    .card__title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 8px;
+      white-space: normal;
+      text-overflow: initial;
+    }
+    .card__author {
+      color: #666;
+      font-size: 14px;
+    }
+    .card__description {
+      font-size: 13px;
+      color: #888;
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 36px;
+    }
+    /* Buscador avanzado */
+    .busqueda-avanzada label {
+      font-family: "BebasNeue";
+      font-size: 18px;
+      margin-top: 8px;
+    }
+    .busqueda-avanzada input,
+    .busqueda-avanzada select {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .busqueda-avanzada {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px 20px 15px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin: 35px auto 30px auto;
+    }
+    .busqueda-avanzada .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+    /* Resultados en grid */
+    #resultados.content__cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 24px;
+      justify-items: center;
+      align-items: stretch;
+      margin-top: 30px;
+    }
+    @media (max-width: 1100px) {
+      #resultados.content__cards { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr);}
+      .cards__card { width: 45vw; height: auto; }
+      .card__image { height: 180px; }
+    }
+    @media (max-width: 700px) {
+      #resultados.content__cards { grid-template-columns: 1fr; grid-template-rows: repeat(8, 1fr);}
+      .cards__card { width: 90vw; height: auto; }
+      .card__image { height: 200px; }
+    }
+    
+  </style>
+</head>
+<body>
+   <!-- Inicio Cabecera -->
+   <header class="header">
+    <div class="header__wrap">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="./img/logo.png" alt="Logo Librería" class="logo__img" />
+        </a>
+      </div>        
+      <nav class="header__menu">
+        <ul class="menu__list">
+          <li class="list__item"><a href="index.html">INICIO</a></li>
+          <li class="list__item">
+            <a class="itemtexto" href="categorias.html">
+              CATEGORIAS <span class="textodesplegable">&#9662;</span>
+            </a>              
+            <ul class="list__submenu">
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=1&nombre=Ficción" class="submenu__title">Ficción</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=2&nombre=Ciencia" class="submenu__title">Ciencia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=3&nombre=Comic/Manga" class="submenu__title">Cómic/Manga</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=4&nombre=Infantil" class="submenu__title">Infantil</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=5&nombre=Fantasía" class="submenu__title">Fantasía</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=6&nombre=Historia" class="submenu__title">Historia</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=7&nombre=Literatura" class="submenu__title">Literatura</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="subcategorias.html?id=8&nombre=Poesía" class="submenu__title">Poesía</a>
+                </li>
+            </ul>
+          </li>
+          <li class="list__item"><a href="autores.html">AUTORES</a></li>
+          <li class="list__item"><a href="suscripciones.html">SUSCRIPCIONES</a></li>
+          <li class="list__item"><a href="faq.html">FAQ</a></li>
+          <li class="list__item"><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      
+      <div class="buttons">
+        <div id="auth-buttons">
+          <button class="botonIniciar"><a class="texto-boton" href="Login-v2/login/login.html">Iniciar Sesión</a></button>
+          <button class="btnRegistro"><a class="texto-botonRe" href="Login-v2/signup/signup.html">Registrarse</a></button>
+        </div>
+        <div id="user-section" style="display: none;">
+          <div class="user-menu">
+            <img id="user-avatar" src="img/usuarios.webp" alt="Foto de perfil" class="user-avatar">
+            <span id="username-display" class="user-name"></span>
+            <ul class="user-submenu">
+              <li><a href="ajustes.html">Ajustes</a></li>
+              <li><a href="busqueda_favoritos.html">Favoritos</a></li>
+              <li><a href="#" id="logout-btn">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- fin de la Cabecera -->
+
+  <main class="content__wrap">
+    <br>
+    <br>
+    <h1 class="texto_poesia mt-4" id="nombre_categoria"></h1>
+    <h2 class="texto_principal" style="margin-top: 20px;">Recomendados</h2>
+    <div class="content__cards" id="recomendados-carrusel"></div>
+
+    <form id="busquedaAvanzada" class="busqueda-avanzada">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="busqueda">Palabras clave</label>
+          <input type="text" class="form-control" id="busqueda" placeholder="Palabra clave, título o ISBN">
+        </div>
+        <div class="col-md-6">
+          <label for="filtroAutor">Autor</label>
+          <input type="text" class="form-control" id="filtroAutor" placeholder="Autor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="filtroTitulo">Título</label>
+          <input type="text" class="form-control" id="filtroTitulo" placeholder="Título">
+        </div>
+        <div class="col-md-6">
+          <label for="filtroISBN">ISBN</label>
+          <input type="text" class="form-control" id="filtroISBN" placeholder="ISBN">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="filtroFecha">Fecha de publicación</label>
+          <input type="month" class="form-control" id="filtroFecha">
+        </div>
+        <div class="col-md-4">
+          <label for="ordenAlfabetico">Ordenar por</label>
+          <select id="ordenAlfabetico" class="form-select">
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+          </select>
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+          <button type="submit" class="btn btn--secondary search-bar__button">Buscar</button>
+        </div>
+      </div>
+    </form>
+
+    <h2 class="texto_principal" style="margin-top: 40px;">Resultados de búsqueda</h2>
+    <div id="resultados" class="content__cards"></div>
+  </main>
+  <br>
+  <br>
+  <footer class="footer">
+    <div class="footer__wrap">
+        <!-- Contenido izquierda (redes sociales) -->
+        <div class="footer-left">
+            <div class="footer__social">
+                <button class="footer__button">REDES SOCIALES</button>
+                <div class="footer__icons">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/iii_tristan_iii?igsh=N3JmdWVpNnVodzMx"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/TristanBTBooks"><img src="img/twitter.png" alt="X/Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright centrado -->
+        <div class="footer-center">
+            <p class="footer_copy">© 2025 Tristan: Behind The Books - Todos los derechos reservados</p>
+        </div>
+
+        <!-- Newsletter a la derecha -->
+        <div class="footer-right">
+            <form class="newsletter-form">
+                <div class="newsletter-header">
+                    <span class="newsletter-label">Newsletter</span>
+                    <input type="email" placeholder="Tu email" required>
+                </div>
+                <div class="newsletter-options">
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-all" checked>
+                        <span>Todas</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-poetry">
+                        <span>Poesía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-literature">
+                        <span>Literatura</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-fantasy">
+                        <span>Fantasía</span>
+                    </label>
+                    <label class="newsletter-checkbox">
+                        <input type="checkbox" name="newsletter-children">
+                        <span>Infantil</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</footer>
+<script src="./javascript/ajustesusu.js"></script>
+<script src="./javascript/subcategorias.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

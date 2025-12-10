@@ -1,0 +1,208 @@
+/* Estilos generales para el registro - Coherentes con login */
+body {
+    font-family: "TrebuchetMS", Arial, sans-serif;
+    background-color: var(--color-backgroung);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../img/biblioteca.png');
+    background-size: cover;
+    background-position: center;
+    animation: moverBiblioteca 15s infinite;
+}
+
+@keyframes moverBiblioteca {
+    0% {
+        background-position: 0% 0%;
+    }
+    20% {
+        background-position: 20% 20%;
+    }
+    40% {
+        background-position: 40% 40%;
+    }
+    60% {
+        background-position: 60% 60%;
+    }
+    80% {
+        background-position: 80% 80%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(163, 136, 82, 0.3);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--color-banner);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-banner);
+    font-family: "BebasNeue";
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del formulario */
+#register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-banner);
+    font-family: "BebasNeue";
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--color-banner); /* Borde más grueso */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: "TrebuchetMS";
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Añade un color de fondo más sólido para mejor contraste */
+    background-color: #fff;
+    /* Añade una sombra sutil para mayor profundidad */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Opcional: puedes añadir un estilo diferente para el hover */
+input:hover {
+    border-color: var(--color-box-shadow2);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-box-shadow2);
+    box-shadow: 0 0 0 3px rgba(163, 136, 82, 0.3);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to bottom, #8b5e3c 0%, #5a3c2e 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "BebasNeue";
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to bottom, #a38852 0%, #8b5e3c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el reCAPTCHA */
+.g-recaptcha {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para el toggle entre formularios */
+.toggle-form {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "TrebuchetMS";
+    color: #555;
+    font-size: 15px;
+}
+
+.toggle-form a {
+    color: var(--color-banner);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.toggle-form a:hover {
+    color: var(--color-box-shadow2);
+    text-decoration: underline;
+}
+
+/* Estilos para el login social */
+.social-login {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.social-login p {
+    margin-bottom: 15px;
+    font-family: "BebasNeue";
+    color: var(--color-banner);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilos para mensajes de error */
+.error {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: "TrebuchetMS";
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px;
+        margin: 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    input {
+        padding: 10px 12px;
+    }
+    
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 18px;
+    }
+}
